@@ -23,6 +23,7 @@ GitHub Pages: Settings > Pages > Deploy from a branch > `main` / root.
 ```
 pip install -U hccinfhir simple_icd_10_cm
 python3 build/build.py
+node build/check.mjs   # smoke test: search, typo correction, RAF total
 ```
 
 For a new payment year, change `MAP_YEAR` and `COEF_YEAR` in `build/build.py`.
