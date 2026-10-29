@@ -21,6 +21,7 @@ MODEL = "CMS-HCC Model V28"
 MAP_YEAR = 2027      # CMS mapping year (payment year; dates of service the prior year)
 COEF_YEAR = 2026     # final published coefficients
 COEF_PREFIX = "CNA_HCC"  # community, non-dual, aged
+DATA_DATE = "14MAY2026"  # Last-Modified of the CMS mappings zip for MAP_YEAR, shown as "Updated" on the page
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "..", "data.json")
@@ -130,6 +131,7 @@ out = {
         "weights": f"Payment year {COEF_YEAR} final, community non-dual aged",
         "icd": "ICD-10-CM " + next((f[len("icd10c-tabular-"):-4].replace("-1-", " ") for f in os.listdir(os.path.join(os.path.dirname(icd.__file__), "data")) if f.startswith("icd10c-tabular")), "tabular"),
         "built": datetime.date.today().strftime("%d%b%Y").upper(),
+        "updated": DATA_DATE,
         "counts": {"hccCodes": len(dx), "codes": len(codes), "hccs": len(hcc)},
     },
     "hcc": hcc,

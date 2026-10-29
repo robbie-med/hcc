@@ -321,7 +321,7 @@ footer { margin-top: 32px; font-size: 13px; color: var(--muted); }
 
   fetch("data.json").then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }).then(d => {
     D = d; build();
-    $("src").textContent = "Updated " + D.meta.built;
+    $("src").textContent = "Updated " + D.meta.updated;
     $("q").value = store.get("hcc-last", ""); render(); renderTray();
   }).catch(err => { $("out").innerHTML = `<p>Couldn't load data.json (${esc(err.message)}).</p>`; });
 })();

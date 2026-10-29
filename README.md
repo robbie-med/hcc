@@ -26,6 +26,6 @@ python3 build/build.py
 node build/check.mjs   # smoke test: search, typo correction, RAF total
 ```
 
-For a new payment year, change `MAP_YEAR` and `COEF_YEAR` in `build/build.py`.
+For a new payment year, change `MAP_YEAR`, `COEF_YEAR`, and `DATA_DATE` (the CMS mappings file date) in `build/build.py`.
 
 Reference only. Code what the note supports.
