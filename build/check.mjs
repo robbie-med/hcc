@@ -9,7 +9,8 @@ const js = html.slice(html.indexOf("<script>") + 8, html.lastIndexOf("</script>"
 
 const els = {}, docH = {};
 const el = id => els[id] ??= { value: "", innerHTML: "", textContent: "", hidden: false, dataset: {}, h: {},
-  style: { setProperty() {}, removeProperty() {} }, addEventListener(t, f) { (this.h[t] ??= []).push(f); }, setAttribute() {}, select() {}, focus() {} };
+  style: { setProperty() {}, removeProperty() {} }, classList: { toggle() {} }, addEventListener(t, f) { (this.h[t] ??= []).push(f); }, setAttribute() {}, select() {}, focus() {} };
+globalThis.matchMedia = () => ({ matches: false, addEventListener() {} });
 globalThis.document = { documentElement: el("root"), getElementById: el, querySelectorAll: () => [], addEventListener: (t, f) => (docH[t] ??= []).push(f) };
 globalThis.getComputedStyle = () => ({ getPropertyValue: () => "#0a6b70" });
 globalThis.localStorage = { getItem: () => null, setItem() {} };

@@ -10,7 +10,7 @@
 :root { --bg: #fff; --fg: #111; --muted: #666; --line: #ccc; --accent: #0a6b70; color-scheme: light; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #111; --fg: #ddd; --muted: #999; --line: #444; --accent: #5fc3c6; color-scheme: dark; } }
 :root[data-theme="dark"] { --bg: #111; --fg: #ddd; --muted: #999; --line: #444; --accent: #5fc3c6; color-scheme: dark; }
-body { max-width: 800px; margin: 0 auto; padding: 16px 16px 120px; font: 16px/1.5 system-ui, sans-serif; background: var(--bg); color: var(--fg); }
+body { margin: 0; padding: 16px 16px 120px; font: 16px/1.5 system-ui, sans-serif; background: var(--bg); color: var(--fg); }
 h1 { font-size: 22px; margin: 0 0 12px; }
 h2 { font-size: 15px; margin: 20px 0 6px; color: var(--muted); }
 h3 { font-size: 16px; margin: 24px 0 4px; }
@@ -29,13 +29,20 @@ p { margin: 4px 0; }
 ul { padding-left: 20px; }
 footer { margin-top: 32px; font-size: 13px; color: var(--muted); }
 #sel { position: fixed; left: 0; right: 0; bottom: 0; background: var(--bg); border-top: 1px solid var(--line); padding: 8px 16px; max-height: 50vh; overflow: auto; }
-#sel > div { max-width: 800px; margin: 0 auto; }
+#sel.empty { display: none; }
+@media (min-width: 900px) {
+  body { display: grid; grid-template-columns: minmax(0, 1fr) 360px; gap: 32px; align-items: start; padding: 16px 24px; }
+  #sel, #sel.empty { display: block; position: sticky; top: 16px; max-height: calc(100vh - 32px); border: 1px solid var(--line); padding: 12px; }
+  #sel summary { display: none; }
+  #tcount { display: block; margin-bottom: 6px; }
+}
 #toast { position: fixed; top: 8px; right: 8px; background: var(--fg); color: var(--bg); padding: 4px 10px; font-size: 14px; }
 [hidden] { display: none !important; }
 </style>
 </head>
 <body>
 
+<main>
 <h1>HCC Finder</h1>
 <input id="q" type="search" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Diagnosis, symptom, abbreviation, or ICD-10 code" aria-label="Search">
 <div id="out"><p class="muted">Loading…</p></div>
@@ -47,14 +54,15 @@ footer { margin-top: 32px; font-size: 13px; color: var(--muted); }
   <p>Reference only. Code what the note supports.</p>
   <p>Color <input id="accent" type="color"> Mode <select id="theme"><option value="">Auto</option><option value="light">Light</option><option value="dark">Dark</option></select> <button id="reset" type="button">Reset</button></p>
 </footer>
+</main>
 
-<div id="sel" hidden><div>
+<aside id="sel" class="empty">
   <b id="tcount"></b>
   <button id="tcopy" type="button">Copy list</button>
   <button id="tcodes" type="button">Copy codes</button>
   <button id="tclear" type="button">Clear</button>
-  <details><summary>Show list</summary><div id="tlist"></div></details>
-</div></div>
+  <details id="seldet"><summary>Show list</summary><div id="tlist"></div></details>
+</aside>
 <div id="toast" hidden></div>
 
 <script>
@@ -266,12 +274,13 @@ footer { margin-top: 32px; font-size: 13px; color: var(--muted); }
     const hs = new Set(picked.flatMap(p => (BY.get(p.c) || { h: [] }).h));
     const out = new Set([...hs].filter(h => HCCS[h].b.some(b => hs.has(b))));
     const raf = [...hs].filter(h => !out.has(h)).reduce((s, h) => s + (HCCS[h].w || 0), 0);
-    $("sel").hidden = !picked.length;
-    $("tcount").textContent = `${picked.length} selected, RAF ${raf.toFixed(3)}`;
+    $("sel").classList.toggle("empty", !picked.length);
+    for (const id of ["tcopy", "tcodes", "tclear"]) $(id).disabled = !picked.length;
+    $("tcount").textContent = picked.length ? `${picked.length} selected, RAF ${raf.toFixed(3)}` : "No conditions selected";
     $("tlist").innerHTML = picked.map(p => {
       const h = (BY.get(p.c) || { h: [] }).h.map(n => out.has(n) ? `<s>HCC ${n}</s> outranked` : `HCC ${n}`).join(", ");
       return `<p><button class="link" data-rm="${p.c}" aria-label="Remove ${esc(dot(p.c))}">×</button> <code>${esc(dot(p.c))}</code> ${esc(p.d)} <small>${h}</small></p>`;
-    }).join("") + `<p><small>RAF is the sum of HCC weights after hierarchies (community, non-dual, aged). Demographic factors, interaction terms, and the normalization factor are not included.</small></p>`;
+    }).join("") + (picked.length ? `<p><small>RAF is the sum of HCC weights after hierarchies (community, non-dual, aged). Demographic factors, interaction terms, and the normalization factor are not included.</small></p>` : "");
     store.set("hcc-picked", picked);
   }
   function toggle(c) {
@@ -291,6 +300,9 @@ footer { margin-top: 32px; font-size: 13px; color: var(--muted); }
     else if (b.dataset.q) { $("q").value = b.dataset.q; store.set("hcc-last", b.dataset.q); expanded.clear(); render(); window.scrollTo(0, 0); }
     else if (b.dataset.more) { expanded.add(+b.dataset.more); render(); }
   });
+  // the list is always open in the desktop side panel, collapsed in the phone bar
+  const wide = matchMedia("(min-width: 900px)"), syncOpen = () => $("seldet").open = wide.matches;
+  wide.addEventListener("change", syncOpen); syncOpen();
   $("tcopy").addEventListener("click", () => copy(picked.map(p => `${dot(p.c)} ${p.d}`).join("\n"), `${picked.length} diagnos${picked.length === 1 ? "is" : "es"}`));
   $("tcodes").addEventListener("click", () => copy(picked.map(p => dot(p.c)).join(", "), plural(picked.length, "code")));
   $("tclear").addEventListener("click", () => { picked = []; renderTray(); render(); });
