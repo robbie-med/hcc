@@ -1,0 +1,2454 @@
+{
+ "synonyms": {
+  "chf": [
+   "heart failure"
+  ],
+  "hf": [
+   "heart failure"
+  ],
+  "hfref": [
+   "systolic heart failure",
+   "systolic (congestive) heart failure"
+  ],
+  "hfpef": [
+   "diastolic heart failure",
+   "diastolic (congestive) heart failure"
+  ],
+  "hfmref": [
+   "combined systolic and diastolic heart failure"
+  ],
+  "lvad": [
+   "heart assist device"
+  ],
+  "afib": [
+   "atrial fibrillation"
+  ],
+  "a fib": [
+   "atrial fibrillation"
+  ],
+  "af": [
+   "atrial fibrillation"
+  ],
+  "aflutter": [
+   "atrial flutter"
+  ],
+  "a flutter": [
+   "atrial flutter"
+  ],
+  "sss": [
+   "sick sinus syndrome"
+  ],
+  "vtach": [
+   "ventricular tachycardia"
+  ],
+  "vt": [
+   "ventricular tachycardia"
+  ],
+  "vfib": [
+   "ventricular fibrillation"
+  ],
+  "chb": [
+   "complete atrioventricular block"
+  ],
+  "heart block": [
+   "atrioventricular block"
+  ],
+  "mi": [
+   "myocardial infarction"
+  ],
+  "nstemi": [
+   "non-st elevation (nstemi) myocardial infarction"
+  ],
+  "stemi": [
+   "st elevation (stemi) myocardial infarction"
+  ],
+  "heart attack": [
+   "myocardial infarction"
+  ],
+  "ua": [
+   "unstable angina"
+  ],
+  "acs": [
+   "unstable angina",
+   "acute myocardial infarction",
+   "acute ischemic heart disease"
+  ],
+  "cm": [
+   "cardiomyopathy"
+  ],
+  "hcm": [
+   "hypertrophic cardiomyopathy"
+  ],
+  "hocm": [
+   "obstructive hypertrophic cardiomyopathy"
+  ],
+  "dcm": [
+   "dilated cardiomyopathy"
+  ],
+  "ph": [
+   "pulmonary hypertension"
+  ],
+  "pah": [
+   "pulmonary arterial hypertension"
+  ],
+  "pulm htn": [
+   "pulmonary hypertension"
+  ],
+  "htn": [
+   "hypertensive heart",
+   "hypertensive chronic kidney",
+   "hypertensive heart and chronic kidney"
+  ],
+  "hypertension": [
+   "hypertensive heart",
+   "hypertensive chronic kidney",
+   "hypertensive heart and chronic kidney"
+  ],
+  "dvt": [
+   "deep vein thrombosis",
+   "embolism and thrombosis of deep veins"
+  ],
+  "pe": [
+   "pulmonary embolism"
+  ],
+  "vte": [
+   "deep vein thrombosis",
+   "embolism and thrombosis of deep veins",
+   "pulmonary embolism"
+  ],
+  "clot": [
+   "embolism and thrombosis",
+   "pulmonary embolism"
+  ],
+  "pad": [
+   "atherosclerosis of native arteries of extremities",
+   "diabetes mellitus with diabetic peripheral angiopathy"
+  ],
+  "pvd": [
+   "atherosclerosis of native arteries of extremities",
+   "diabetes mellitus with diabetic peripheral angiopathy"
+  ],
+  "peripheral artery disease": [
+   "atherosclerosis of native arteries of extremities",
+   "diabetes mellitus with diabetic peripheral angiopathy"
+  ],
+  "cva": [
+   "cerebral infarction",
+   "following cerebral infarction"
+  ],
+  "stroke": [
+   "cerebral infarction",
+   "following cerebral infarction",
+   "intracerebral hemorrhage"
+  ],
+  "ich": [
+   "intracerebral hemorrhage"
+  ],
+  "sah": [
+   "subarachnoid hemorrhage"
+  ],
+  "sdh": [
+   "subdural hemorrhage"
+  ],
+  "dm": [
+   "diabetes mellitus"
+  ],
+  "dm1": [
+   "type 1 diabetes mellitus"
+  ],
+  "dm2": [
+   "type 2 diabetes mellitus"
+  ],
+  "t1dm": [
+   "type 1 diabetes mellitus"
+  ],
+  "t2dm": [
+   "type 2 diabetes mellitus"
+  ],
+  "iddm": [
+   "type 1 diabetes mellitus"
+  ],
+  "niddm": [
+   "type 2 diabetes mellitus"
+  ],
+  "diabetes": [
+   "diabetes mellitus"
+  ],
+  "dka": [
+   "diabetes mellitus with ketoacidosis"
+  ],
+  "hhs": [
+   "diabetes mellitus with hyperosmolarity"
+  ],
+  "hypoglycemia": [
+   "diabetes mellitus with hypoglycemia"
+  ],
+  "dpn": [
+   "diabetes mellitus with diabetic polyneuropathy",
+   "diabetes mellitus with diabetic neuropathy"
+  ],
+  "diabetic neuropathy": [
+   "diabetes mellitus with diabetic neuropathy",
+   "diabetes mellitus with diabetic polyneuropathy"
+  ],
+  "gastroparesis": [
+   "diabetes mellitus with diabetic autonomic"
+  ],
+  "dfu": [
+   "diabetes mellitus with foot ulcer",
+   "non-pressure chronic ulcer"
+  ],
+  "diabetic foot ulcer": [
+   "diabetes mellitus with foot ulcer",
+   "non-pressure chronic ulcer"
+  ],
+  "pdr": [
+   "proliferative diabetic retinopathy"
+  ],
+  "npdr": [
+   "nonproliferative diabetic retinopathy"
+  ],
+  "retinopathy": [
+   "diabetic retinopathy"
+  ],
+  "dme": [
+   "diabetic retinopathy with macular edema"
+  ],
+  "ckd": [
+   "chronic kidney disease"
+  ],
+  "ckd3": [
+   "chronic kidney disease, stage 3"
+  ],
+  "ckd 3": [
+   "chronic kidney disease, stage 3"
+  ],
+  "ckd3a": [
+   "chronic kidney disease, stage 3a"
+  ],
+  "ckd 3a": [
+   "chronic kidney disease, stage 3a"
+  ],
+  "ckd3b": [
+   "chronic kidney disease, stage 3b"
+  ],
+  "ckd 3b": [
+   "chronic kidney disease, stage 3b"
+  ],
+  "ckd4": [
+   "chronic kidney disease, stage 4"
+  ],
+  "ckd 4": [
+   "chronic kidney disease, stage 4"
+  ],
+  "ckd5": [
+   "chronic kidney disease, stage 5",
+   "end stage renal disease"
+  ],
+  "ckd 5": [
+   "chronic kidney disease, stage 5",
+   "end stage renal disease"
+  ],
+  "esrd": [
+   "end stage renal disease"
+  ],
+  "eskd": [
+   "end stage renal disease"
+  ],
+  "kidney disease": [
+   "chronic kidney disease"
+  ],
+  "renal failure": [
+   "chronic kidney disease",
+   "end stage renal disease"
+  ],
+  "copd": [
+   "chronic obstructive pulmonary disease"
+  ],
+  "emphysema": [
+   "emphysema"
+  ],
+  "chronic bronchitis": [
+   "chronic bronchitis",
+   "chronic obstructive bronchitis"
+  ],
+  "ild": [
+   "interstitial pulmonary disease",
+   "interstitial lung disease",
+   "pulmonary fibrosis"
+  ],
+  "ipf": [
+   "idiopathic pulmonary fibrosis"
+  ],
+  "asthma": [
+   "severe persistent asthma",
+   "asthma"
+  ],
+  "cf": [
+   "cystic fibrosis"
+  ],
+  "crf": [
+   "chronic respiratory failure"
+  ],
+  "respiratory failure": [
+   "respiratory failure"
+  ],
+  "trach": [
+   "tracheostomy status",
+   "tracheostomy"
+  ],
+  "vent": [
+   "dependence on respirator"
+  ],
+  "ventilator": [
+   "dependence on respirator"
+  ],
+  "mdd": [
+   "major depressive disorder"
+  ],
+  "depression": [
+   "major depressive disorder"
+  ],
+  "depressed": [
+   "major depressive disorder"
+  ],
+  "bipolar": [
+   "bipolar disorder"
+  ],
+  "bpad": [
+   "bipolar disorder"
+  ],
+  "schizo": [
+   "schizophrenia",
+   "schizoaffective"
+  ],
+  "scz": [
+   "schizophrenia"
+  ],
+  "psychosis": [
+   "psychotic disorder",
+   "psychosis"
+  ],
+  "bpd": [
+   "borderline personality disorder"
+  ],
+  "personality disorder": [
+   "personality disorder"
+  ],
+  "anorexia": [
+   "anorexia nervosa"
+  ],
+  "bulimia": [
+   "bulimia nervosa"
+  ],
+  "aud": [
+   "alcohol dependence",
+   "alcohol abuse",
+   "alcohol use"
+  ],
+  "alcoholism": [
+   "alcohol dependence"
+  ],
+  "etoh": [
+   "alcohol dependence",
+   "alcohol abuse",
+   "alcohol use",
+   "alcoholic"
+  ],
+  "alcohol": [
+   "alcohol dependence",
+   "alcohol abuse",
+   "alcohol use",
+   "alcoholic"
+  ],
+  "oud": [
+   "opioid dependence",
+   "opioid abuse",
+   "opioid use"
+  ],
+  "opioid": [
+   "opioid dependence",
+   "opioid abuse",
+   "opioid use"
+  ],
+  "moud": [
+   "opioid dependence"
+  ],
+  "suboxone": [
+   "opioid dependence"
+  ],
+  "buprenorphine": [
+   "opioid dependence"
+  ],
+  "methadone": [
+   "opioid dependence"
+  ],
+  "sud": [
+   "dependence",
+   "drug use"
+  ],
+  "meth": [
+   "amphetamine",
+   "stimulant dependence",
+   "stimulant abuse"
+  ],
+  "methamphetamine": [
+   "amphetamine",
+   "stimulant dependence",
+   "stimulant abuse"
+  ],
+  "cocaine": [
+   "cocaine dependence",
+   "cocaine abuse"
+  ],
+  "cannabis": [
+   "cannabis dependence",
+   "cannabis abuse"
+  ],
+  "marijuana": [
+   "cannabis dependence",
+   "cannabis abuse"
+  ],
+  "benzo": [
+   "sedative, hypnotic or anxiolytic dependence"
+  ],
+  "dementia": [
+   "dementia"
+  ],
+  "alzheimer": [
+   "alzheimer"
+  ],
+  "alzheimers": [
+   "alzheimer"
+  ],
+  "alzheimer's": [
+   "alzheimer"
+  ],
+  "mci": [
+   "mild cognitive impairment"
+  ],
+  "lbd": [
+   "dementia with lewy bodies"
+  ],
+  "lewy": [
+   "lewy bodies"
+  ],
+  "ftd": [
+   "frontotemporal"
+  ],
+  "neurocognitive disorder": [
+   "dementia"
+  ],
+  "pd": [
+   "parkinson"
+  ],
+  "parkinsons": [
+   "parkinson"
+  ],
+  "parkinson's": [
+   "parkinson"
+  ],
+  "ms": [
+   "multiple sclerosis"
+  ],
+  "als": [
+   "amyotrophic lateral sclerosis"
+  ],
+  "mg": [
+   "myasthenia gravis"
+  ],
+  "cidp": [
+   "chronic inflammatory demyelinating polyneuritis"
+  ],
+  "cp": [
+   "cerebral palsy"
+  ],
+  "sma": [
+   "spinal muscular atrophy"
+  ],
+  "epilepsy": [
+   "epilepsy"
+  ],
+  "seizure": [
+   "epilepsy",
+   "seizure",
+   "convulsions"
+  ],
+  "seizures": [
+   "epilepsy",
+   "seizure",
+   "convulsions"
+  ],
+  "tbi": [
+   "intracranial injury",
+   "concussion",
+   "diffuse traumatic brain injury"
+  ],
+  "hemiparesis": [
+   "hemiplegia",
+   "hemiparesis"
+  ],
+  "paraplegia": [
+   "paraplegia"
+  ],
+  "quadriplegia": [
+   "quadriplegia"
+  ],
+  "tetraplegia": [
+   "quadriplegia"
+  ],
+  "sci": [
+   "spinal cord injury",
+   "spinal cord"
+  ],
+  "hiv": [
+   "human immunodeficiency virus",
+   "hiv"
+  ],
+  "aids": [
+   "human immunodeficiency virus"
+  ],
+  "hcv": [
+   "chronic viral hepatitis c"
+  ],
+  "hep c": [
+   "chronic viral hepatitis c"
+  ],
+  "hepatitis c": [
+   "chronic viral hepatitis c"
+  ],
+  "hbv": [
+   "chronic viral hepatitis b"
+  ],
+  "hep b": [
+   "chronic viral hepatitis b"
+  ],
+  "hepatitis b": [
+   "chronic viral hepatitis b"
+  ],
+  "aih": [
+   "autoimmune hepatitis"
+  ],
+  "cirrhosis": [
+   "cirrhosis"
+  ],
+  "esld": [
+   "hepatic failure",
+   "chronic hepatic failure"
+  ],
+  "liver failure": [
+   "hepatic failure"
+  ],
+  "portal hypertension": [
+   "portal hypertension"
+  ],
+  "varices": [
+   "esophageal varices"
+  ],
+  "hepatic encephalopathy": [
+   "hepatic encephalopathy"
+  ],
+  "pbc": [
+   "primary biliary cirrhosis",
+   "primary biliary cholangitis"
+  ],
+  "psc": [
+   "sclerosing cholangitis"
+  ],
+  "nash": [
+   "steatohepatitis",
+   "cirrhosis of liver"
+  ],
+  "mash": [
+   "steatohepatitis",
+   "cirrhosis of liver"
+  ],
+  "ibd": [
+   "crohn",
+   "ulcerative colitis"
+  ],
+  "crohns": [
+   "crohn"
+  ],
+  "crohn's": [
+   "crohn"
+  ],
+  "uc": [
+   "ulcerative colitis",
+   "ulcerative pancolitis"
+  ],
+  "pancreatitis": [
+   "chronic pancreatitis"
+  ],
+  "sbo": [
+   "intestinal obstruction",
+   "obstruction of intestine"
+  ],
+  "ra": [
+   "rheumatoid arthritis",
+   "rheumatoid"
+  ],
+  "psa": [
+   "psoriatic arthritis",
+   "psoriatic arthropathy"
+  ],
+  "psoriatic arthritis": [
+   "psoriatic arthritis",
+   "psoriatic arthropathy"
+  ],
+  "sle": [
+   "systemic lupus erythematosus"
+  ],
+  "lupus": [
+   "systemic lupus erythematosus",
+   "lupus"
+  ],
+  "scleroderma": [
+   "systemic sclerosis"
+  ],
+  "ssc": [
+   "systemic sclerosis"
+  ],
+  "sjogren": [
+   "sicca syndrome",
+   "sjogren"
+  ],
+  "sjogrens": [
+   "sicca syndrome",
+   "sjogren"
+  ],
+  "dermatomyositis": [
+   "dermatomyositis",
+   "dermatopolymyositis"
+  ],
+  "polymyositis": [
+   "polymyositis"
+  ],
+  "vasculitis": [
+   "vasculitis",
+   "arteritis",
+   "polyangiitis"
+  ],
+  "gca": [
+   "giant cell arteritis"
+  ],
+  "pmr": [
+   "polymyalgia rheumatica"
+  ],
+  "obesity": [
+   "morbid (severe) obesity",
+   "obesity, class 3",
+   "body mass index [bmi] 40",
+   "obesity"
+  ],
+  "morbid obesity": [
+   "morbid (severe) obesity",
+   "obesity, class 3",
+   "body mass index [bmi] 40",
+   "body mass index [bmi] 50",
+   "body mass index [bmi] 60",
+   "body mass index [bmi] 70"
+  ],
+  "severe obesity": [
+   "morbid (severe) obesity",
+   "obesity, class 3"
+  ],
+  "class 3 obesity": [
+   "obesity, class 3"
+  ],
+  "ohs": [
+   "obesity hypoventilation"
+  ],
+  "bmi": [
+   "body mass index"
+  ],
+  "malnutrition": [
+   "malnutrition",
+   "protein-calorie"
+  ],
+  "pcm": [
+   "protein-calorie malnutrition"
+  ],
+  "cachexia": [
+   "cachexia"
+  ],
+  "amputation": [
+   "acquired absence",
+   "traumatic amputation"
+  ],
+  "amputee": [
+   "acquired absence"
+  ],
+  "bka": [
+   "acquired absence of leg below knee"
+  ],
+  "aka": [
+   "acquired absence of leg above knee"
+  ],
+  "toe amputation": [
+   "acquired absence of toe",
+   "acquired absence of great toe"
+  ],
+  "tma": [
+   "acquired absence of foot"
+  ],
+  "ostomy": [
+   "colostomy status",
+   "ileostomy status",
+   "gastrostomy status",
+   "cystostomy status",
+   "jejunostomy status",
+   "artificial opening"
+  ],
+  "colostomy": [
+   "colostomy"
+  ],
+  "ileostomy": [
+   "ileostomy"
+  ],
+  "peg": [
+   "gastrostomy status",
+   "gastrostomy"
+  ],
+  "g tube": [
+   "gastrostomy status",
+   "gastrostomy"
+  ],
+  "g-tube": [
+   "gastrostomy status",
+   "gastrostomy"
+  ],
+  "feeding tube": [
+   "gastrostomy status",
+   "jejunostomy status"
+  ],
+  "suprapubic": [
+   "cystostomy status"
+  ],
+  "transplant": [
+   "transplant status",
+   "transplant"
+  ],
+  "kidney transplant": [
+   "kidney transplant status",
+   "kidney transplant"
+  ],
+  "liver transplant": [
+   "liver transplant"
+  ],
+  "lung transplant": [
+   "lung transplant"
+  ],
+  "heart transplant": [
+   "heart transplant"
+  ],
+  "bmt": [
+   "bone marrow transplant",
+   "stem cell transplant"
+  ],
+  "sct": [
+   "stem cell transplant",
+   "bone marrow transplant"
+  ],
+  "sickle cell": [
+   "sickle-cell",
+   "sickle cell"
+  ],
+  "scd": [
+   "sickle-cell",
+   "sickle cell"
+  ],
+  "thalassemia": [
+   "thalassemia"
+  ],
+  "itp": [
+   "immune thrombocytopenic purpura"
+  ],
+  "ttp": [
+   "thrombotic microangiopathy",
+   "thrombotic thrombocytopenic purpura"
+  ],
+  "hit": [
+   "heparin induced thrombocytopenia"
+  ],
+  "thrombocytopenia": [
+   "thrombocytopenia",
+   "thrombocytopenic purpura"
+  ],
+  "low platelets": [
+   "thrombocytopenia",
+   "thrombocytopenic purpura"
+  ],
+  "coagulopathy": [
+   "coagulation defect",
+   "von willebrand",
+   "hereditary factor",
+   "acquired hemophilia",
+   "qualitative platelet defects"
+  ],
+  "hemophilia": [
+   "hereditary factor viii deficiency",
+   "hereditary factor ix deficiency",
+   "hemophilia"
+  ],
+  "vwd": [
+   "von willebrand"
+  ],
+  "neutropenia": [
+   "neutropenia",
+   "agranulocytosis"
+  ],
+  "pancytopenia": [
+   "pancytopenia"
+  ],
+  "aplastic anemia": [
+   "aplastic anemia"
+  ],
+  "hemolytic anemia": [
+   "hemolytic anemia"
+  ],
+  "mds": [
+   "myelodysplastic"
+  ],
+  "mpn": [
+   "myeloproliferative",
+   "polycythemia vera",
+   "essential thrombocythemia",
+   "myelofibrosis"
+  ],
+  "pv": [
+   "polycythemia vera"
+  ],
+  "mgus": [
+   "monoclonal gammopathy"
+  ],
+  "myeloma": [
+   "multiple myeloma"
+  ],
+  "mm": [
+   "multiple myeloma"
+  ],
+  "cll": [
+   "chronic lymphocytic leukemia"
+  ],
+  "cml": [
+   "chronic myeloid leukemia"
+  ],
+  "aml": [
+   "acute myeloblastic leukemia",
+   "acute myeloid leukemia"
+  ],
+  "lymphoma": [
+   "lymphoma"
+  ],
+  "nhl": [
+   "non-hodgkin lymphoma",
+   "lymphoma"
+  ],
+  "hodgkin": [
+   "hodgkin lymphoma"
+  ],
+  "cvid": [
+   "common variable immunodeficiency"
+  ],
+  "immunodeficiency": [
+   "immunodeficiency"
+  ],
+  "cancer": [
+   "malignant neoplasm"
+  ],
+  "ca": [
+   "malignant neoplasm"
+  ],
+  "malignancy": [
+   "malignant neoplasm"
+  ],
+  "mets": [
+   "secondary malignant neoplasm"
+  ],
+  "metastatic": [
+   "secondary malignant neoplasm"
+  ],
+  "metastasis": [
+   "secondary malignant neoplasm"
+  ],
+  "breast cancer": [
+   "malignant neoplasm of breast",
+   "malignant neoplasm of central portion of breast",
+   "malignant neoplasm of unspecified site of"
+  ],
+  "prostate cancer": [
+   "malignant neoplasm of prostate"
+  ],
+  "colon cancer": [
+   "malignant neoplasm of colon"
+  ],
+  "crc": [
+   "malignant neoplasm of colon",
+   "malignant neoplasm of rectum"
+  ],
+  "rectal cancer": [
+   "malignant neoplasm of rectum"
+  ],
+  "lung cancer": [
+   "malignant neoplasm of bronchus or lung"
+  ],
+  "nsclc": [
+   "malignant neoplasm of bronchus or lung"
+  ],
+  "sclc": [
+   "malignant neoplasm of bronchus or lung"
+  ],
+  "pancreatic cancer": [
+   "malignant neoplasm of pancreas"
+  ],
+  "bladder cancer": [
+   "malignant neoplasm of bladder"
+  ],
+  "kidney cancer": [
+   "malignant neoplasm of kidney"
+  ],
+  "rcc": [
+   "malignant neoplasm of kidney"
+  ],
+  "melanoma": [
+   "malignant melanoma"
+  ],
+  "hcc": [
+   "liver cell carcinoma"
+  ],
+  "gbm": [
+   "malignant neoplasm of brain"
+  ],
+  "brain tumor": [
+   "malignant neoplasm of brain"
+  ],
+  "pressure ulcer": [
+   "pressure ulcer"
+  ],
+  "pressure injury": [
+   "pressure ulcer"
+  ],
+  "bedsore": [
+   "pressure ulcer"
+  ],
+  "decubitus": [
+   "pressure ulcer"
+  ],
+  "wound": [
+   "non-pressure chronic ulcer",
+   "pressure ulcer"
+  ],
+  "ulcer": [
+   "non-pressure chronic ulcer",
+   "pressure ulcer"
+  ],
+  "venous ulcer": [
+   "varicose veins of lower extremities with ulcer",
+   "non-pressure chronic ulcer",
+   "venous insufficiency"
+  ],
+  "gangrene": [
+   "gangrene"
+  ],
+  "osteomyelitis": [
+   "osteomyelitis"
+  ],
+  "septic arthritis": [
+   "pyogenic arthritis",
+   "arthritis due to other bacteria"
+  ],
+  "nec fasc": [
+   "necrotizing fasciitis"
+  ],
+  "necrotizing fasciitis": [
+   "necrotizing fasciitis"
+  ],
+  "sepsis": [
+   "sepsis",
+   "septic shock"
+  ],
+  "pneumonia": [
+   "aspiration",
+   "pneumonia due to"
+  ],
+  "aspiration pneumonia": [
+   "pneumonitis due to inhalation of food and vomit"
+  ],
+  "empyema": [
+   "pyothorax",
+   "empyema"
+  ],
+  "compression fracture": [
+   "collapsed vertebra",
+   "wedge compression fracture",
+   "with current pathological fracture, vertebra"
+  ],
+  "vertebral fracture": [
+   "collapsed vertebra",
+   "fracture of",
+   "vertebra"
+  ],
+  "hip fracture": [
+   "fracture of neck of",
+   "pertrochanteric fracture",
+   "intertrochanteric fracture",
+   "subtrochanteric fracture"
+  ],
+  "wet amd": [
+   "exudative age-related macular degeneration"
+  ],
+  "amd": [
+   "age-related macular degeneration"
+  ],
+  "macular degeneration": [
+   "age-related macular degeneration"
+  ],
+  "crvo": [
+   "central retinal vein occlusion"
+  ],
+  "brvo": [
+   "branch retinal vein occlusion"
+  ],
+  "rvo": [
+   "retinal vein occlusion"
+  ],
+  "vitreous hemorrhage": [
+   "vitreous hemorrhage"
+  ],
+  "addison": [
+   "adrenocortical insufficiency",
+   "addison"
+  ],
+  "adrenal insufficiency": [
+   "adrenocortical insufficiency",
+   "adrenal insufficiency"
+  ],
+  "cushing": [
+   "cushing"
+  ],
+  "acromegaly": [
+   "acromegaly"
+  ],
+  "hypopituitarism": [
+   "hypopituitarism"
+  ],
+  "di": [
+   "diabetes insipidus"
+  ],
+  "amyloidosis": [
+   "amyloidosis"
+  ],
+  "porphyria": [
+   "porphyria"
+  ],
+  "hemochromatosis": [
+   "hemochromatosis"
+  ],
+  "wilson": [
+   "wilson"
+  ],
+  "gaucher": [
+   "gaucher"
+  ],
+  "fabry": [
+   "fabry"
+  ],
+  "pemphigoid": [
+   "pemphigoid"
+  ],
+  "pemphigus": [
+   "pemphigus"
+  ],
+  "burn": [
+   "burn",
+   "corrosion"
+  ],
+  "huntington": [
+   "huntington"
+  ],
+  "ataxia": [
+   "ataxia"
+  ],
+  "muscular dystrophy": [
+   "muscular dystrophy"
+  ],
+  "anoxic brain injury": [
+   "anoxic brain damage"
+  ],
+  "coma": [
+   "coma"
+  ]
+ },
+ "symptoms": [
+  {
+   "terms": [
+    "edema",
+    "swelling",
+    "leg swelling",
+    "fluid overload",
+    "volume overload",
+    "anasarca"
+   ],
+   "consider": [
+    {
+     "name": "Heart failure",
+     "q": "heart failure",
+     "note": "Type and acuity."
+    },
+    {
+     "name": "Pulmonary hypertension",
+     "q": "pulmonary hypertension",
+     "note": "Group, if known."
+    },
+    {
+     "name": "Chronic kidney disease stage 3b-5",
+     "q": "chronic kidney disease, stage",
+     "note": "Stage from eGFR."
+    },
+    {
+     "name": "Cirrhosis",
+     "q": "cirrhosis",
+     "note": "Etiology."
+    },
+    {
+     "name": "Chronic DVT",
+     "q": "chronic embolism and thrombosis of deep veins",
+     "note": "Acute vs chronic, vessel, side."
+    }
+   ]
+  },
+  {
+   "terms": [
+    "dyspnea",
+    "shortness of breath",
+    "sob",
+    "doe",
+    "breathless",
+    "orthopnea",
+    "pnd"
+   ],
+   "consider": [
+    {
+     "name": "Heart failure",
+     "q": "heart failure",
+     "note": "Type and acuity."
+    },
+    {
+     "name": "COPD",
+     "q": "chronic obstructive pulmonary disease",
+     "note": "Exacerbation status."
+    },
+    {
+     "name": "Interstitial lung disease",
+     "q": "pulmonary fibrosis",
+     "note": "Type."
+    },
+    {
+     "name": "Severe persistent asthma",
+     "q": "severe persistent asthma",
+     "note": "Mild and moderate persistent asthma don't map."
+    },
+    {
+     "name": "Pulmonary hypertension",
+     "q": "pulmonary hypertension",
+     "note": "Group, if known."
+    },
+    {
+     "name": "Chronic pulmonary embolism",
+     "q": "chronic pulmonary embolism",
+     "note": "Acute vs chronic."
+    },
+    {
+     "name": "Chronic respiratory failure",
+     "q": "chronic respiratory failure",
+     "note": "With hypoxia or hypercapnia, and home O2 use."
+    },
+    {
+     "name": "Cardiomyopathy",
+     "q": "cardiomyopathy",
+     "note": "Type."
+    },
+    {
+     "name": "Atrial fibrillation",
+     "q": "atrial fibrillation",
+     "note": "Type."
+    }
+   ]
+  },
+  {
+   "terms": [
+    "hypoxia",
+    "hypoxemia",
+    "home oxygen",
+    "home o2",
+    "oxygen dependent",
+    "o2"
+   ],
+   "consider": [
+    {
+     "name": "Chronic respiratory failure",
+     "q": "chronic respiratory failure",
+     "note": "Document the diagnosis, not just the O2 use; Z99.81 alone doesn't map."
+    },
+    {
+     "name": "COPD",
+     "q": "chronic obstructive pulmonary disease",
+     "note": ""
+    },
+    {
+     "name": "Interstitial lung disease",
+     "q": "pulmonary fibrosis",
+     "note": ""
+    },
+    {
+     "name": "Pulmonary hypertension",
+     "q": "pulmonary hypertension",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "terms": [
+    "palpitations",
+    "irregular heartbeat",
+    "irregular heart",
+    "tachycardia",
+    "racing heart"
+   ],
+   "consider": [
+    {
+     "name": "Atrial fibrillation",
+     "q": "atrial fibrillation",
+     "note": "Paroxysmal, persistent, or permanent."
+    },
+    {
+     "name": "Atrial flutter",
+     "q": "atrial flutter",
+     "note": "Typical vs atypical."
+    },
+    {
+     "name": "Ventricular tachycardia",
+     "q": "ventricular tachycardia",
+     "note": ""
+    },
+    {
+     "name": "Cardiomyopathy",
+     "q": "cardiomyopathy",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "terms": [
+    "syncope",
+    "bradycardia",
+    "pauses",
+    "slow heart rate",
+    "pacemaker"
+   ],
+   "consider": [
+    {
+     "name": "Sick sinus syndrome",
+     "q": "sick sinus syndrome",
+     "note": "Pacemaker status alone doesn't map; document the rhythm diagnosis."
+    },
+    {
+     "name": "Complete heart block",
+     "q": "atrioventricular block, complete",
+     "note": ""
+    },
+    {
+     "name": "Ventricular tachycardia",
+     "q": "ventricular tachycardia",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "terms": [
+    "chest pain",
+    "angina",
+    "troponin",
+    "elevated troponin"
+   ],
+   "consider": [
+    {
+     "name": "Unstable angina",
+     "q": "unstable angina",
+     "note": "Stable angina doesn't map."
+    },
+    {
+     "name": "Acute MI (within 4 weeks)",
+     "q": "acute myocardial infarction",
+     "note": "Old MI (I25.2) doesn't map."
+    },
+    {
+     "name": "Subsequent MI",
+     "q": "subsequent",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "terms": [
+    "weight loss",
+    "unintentional weight loss",
+    "poor appetite",
+    "anorexia weight",
+    "failure to thrive",
+    "ftt",
+    "frailty"
+   ],
+   "consider": [
+    {
+     "name": "Active cancer",
+     "q": "malignant neoplasm",
+     "note": "Current treatment or evidence of disease."
+    },
+    {
+     "name": "Major depression, moderate or severe",
+     "q": "major depressive disorder",
+     "note": "Severity."
+    },
+    {
+     "name": "Dementia",
+     "q": "dementia",
+     "note": "Severity."
+    },
+    {
+     "name": "Cirrhosis or chronic liver failure",
+     "q": "cirrhosis",
+     "note": ""
+    },
+    {
+     "name": "Crohn's disease",
+     "q": "crohn",
+     "note": ""
+    },
+    {
+     "name": "Chronic pancreatitis",
+     "q": "chronic pancreatitis",
+     "note": ""
+    },
+    {
+     "name": "HIV",
+     "q": "human immunodeficiency virus",
+     "note": ""
+    },
+    {
+     "name": "Heart failure",
+     "q": "heart failure",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "terms": [
+    "memory loss",
+    "forgetful",
+    "forgetfulness",
+    "cognitive decline",
+    "cognitive impairment",
+    "confusion",
+    "memory"
+   ],
+   "consider": [
+    {
+     "name": "Dementia",
+     "q": "dementia",
+     "note": "Type and severity (mild, moderate, severe); behavioral or psychotic disturbance if present."
+    },
+    {
+     "name": "Alzheimer's disease",
+     "q": "alzheimer",
+     "note": "Pair G30.- with F02.-."
+    },
+    {
+     "name": "Lewy body or frontotemporal dementia",
+     "q": "lewy bodies",
+     "note": ""
+    },
+    {
+     "name": "Parkinson disease",
+     "q": "parkinson",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "terms": [
+    "tremor",
+    "rigidity",
+    "bradykinesia",
+    "shuffling gait",
+    "shuffling"
+   ],
+   "consider": [
+    {
+     "name": "Parkinson disease",
+     "q": "parkinson",
+     "note": "Fluctuations and dyskinesia are coded in the G20 codes."
+    },
+    {
+     "name": "Other basal ganglia disease",
+     "q": "degenerative disease of basal ganglia",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "terms": [
+    "falls",
+    "fall",
+    "gait",
+    "gait instability",
+    "weakness",
+    "unsteady",
+    "walker",
+    "wheelchair"
+   ],
+   "consider": [
+    {
+     "name": "Hemiplegia/hemiparesis after stroke",
+     "q": "hemiplegia",
+     "note": "Side and dominance."
+    },
+    {
+     "name": "Parkinson disease",
+     "q": "parkinson",
+     "note": ""
+    },
+    {
+     "name": "Multiple sclerosis",
+     "q": "multiple sclerosis",
+     "note": ""
+    },
+    {
+     "name": "Diabetic polyneuropathy",
+     "q": "diabetes mellitus with diabetic polyneuropathy",
+     "note": ""
+    },
+    {
+     "name": "Vertebral fracture",
+     "q": "with current pathological fracture, vertebra",
+     "note": ""
+    },
+    {
+     "name": "Lower limb amputation status",
+     "q": "acquired absence of leg",
+     "note": ""
+    },
+    {
+     "name": "Dementia",
+     "q": "dementia",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "terms": [
+    "numbness",
+    "tingling",
+    "neuropathy",
+    "burning feet",
+    "foot pain",
+    "paresthesia",
+    "paresthesias"
+   ],
+   "consider": [
+    {
+     "name": "Diabetic polyneuropathy",
+     "q": "diabetes mellitus with diabetic polyneuropathy",
+     "note": "Polyneuropathy NOS (G62.9) doesn't map."
+    },
+    {
+     "name": "Diabetic neuropathy, other",
+     "q": "diabetes mellitus with diabetic neuropathy",
+     "note": ""
+    },
+    {
+     "name": "CIDP",
+     "q": "chronic inflammatory demyelinating polyneuritis",
+     "note": ""
+    },
+    {
+     "name": "Multiple sclerosis",
+     "q": "multiple sclerosis",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "terms": [
+    "vision loss",
+    "blurry vision",
+    "blurred vision",
+    "decreased vision",
+    "floaters"
+   ],
+   "consider": [
+    {
+     "name": "Proliferative diabetic retinopathy",
+     "q": "proliferative diabetic retinopathy",
+     "note": "Pull from the eye exam report; laterality and macular edema."
+    },
+    {
+     "name": "Exudative (wet) AMD",
+     "q": "exudative age-related macular degeneration",
+     "note": "Dry AMD doesn't map."
+    },
+    {
+     "name": "Retinal vein occlusion",
+     "q": "retinal vein occlusion",
+     "note": ""
+    },
+    {
+     "name": "Vitreous hemorrhage",
+     "q": "vitreous hemorrhage",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "terms": [
+    "foot ulcer",
+    "nonhealing wound",
+    "non-healing wound",
+    "chronic wound",
+    "skin ulcer",
+    "leg ulcer",
+    "wound"
+   ],
+   "consider": [
+    {
+     "name": "Diabetes with foot ulcer",
+     "q": "diabetes mellitus with foot ulcer",
+     "note": "Also code the ulcer site and depth (L97.-)."
+    },
+    {
+     "name": "Non-pressure chronic ulcer",
+     "q": "non-pressure chronic ulcer",
+     "note": "Depth: limited to skin, fat, muscle, or bone."
+    },
+    {
+     "name": "Pressure ulcer",
+     "q": "pressure ulcer",
+     "note": "Stage."
+    },
+    {
+     "name": "PAD with ulceration or gangrene",
+     "q": "atherosclerosis of native arteries",
+     "note": ""
+    },
+    {
+     "name": "Osteomyelitis",
+     "q": "osteomyelitis",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "terms": [
+    "claudication",
+    "leg pain walking",
+    "cold feet",
+    "rest pain",
+    "poor pulses",
+    "decreased pulses"
+   ],
+   "consider": [
+    {
+     "name": "PAD with rest pain",
+     "q": "atherosclerosis of native arteries of extremities with rest pain",
+     "note": "Claudication alone (I70.21-) doesn't map."
+    },
+    {
+     "name": "PAD with ulceration",
+     "q": "atherosclerosis of native arteries of",
+     "note": ""
+    },
+    {
+     "name": "Diabetes with peripheral angiopathy",
+     "q": "diabetes mellitus with diabetic peripheral angiopathy",
+     "note": "ICD-10 presumes the diabetes-PAD link."
+    }
+   ]
+  },
+  {
+   "terms": [
+    "low mood",
+    "sad",
+    "sadness",
+    "anhedonia",
+    "phq",
+    "phq-9",
+    "phq9",
+    "suicidal"
+   ],
+   "consider": [
+    {
+     "name": "Major depression, moderate or severe",
+     "q": "major depressive disorder",
+     "note": "Single vs recurrent, severity."
+    },
+    {
+     "name": "Bipolar disorder",
+     "q": "bipolar disorder",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "terms": [
+    "hallucinations",
+    "paranoia",
+    "delusions",
+    "voices",
+    "psychotic"
+   ],
+   "consider": [
+    {
+     "name": "Schizophrenia",
+     "q": "schizophrenia",
+     "note": ""
+    },
+    {
+     "name": "Schizoaffective disorder",
+     "q": "schizoaffective",
+     "note": ""
+    },
+    {
+     "name": "Psychosis, other",
+     "q": "psychosis",
+     "note": ""
+    },
+    {
+     "name": "Dementia with psychotic disturbance",
+     "q": "dementia, with psychotic disturbance",
+     "note": ""
+    },
+    {
+     "name": "Substance-induced psychotic disorder",
+     "q": "induced psychotic disorder",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "terms": [
+    "drinking",
+    "heavy drinking",
+    "drinks",
+    "audit-c",
+    "withdrawal"
+   ],
+   "consider": [
+    {
+     "name": "Alcohol dependence",
+     "q": "alcohol dependence",
+     "note": "Mild AUD (alcohol abuse) doesn't map."
+    },
+    {
+     "name": "Alcoholic cirrhosis",
+     "q": "alcoholic cirrhosis",
+     "note": ""
+    },
+    {
+     "name": "Alcoholic liver disease",
+     "q": "alcoholic",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "terms": [
+    "drug use",
+    "substance use",
+    "ivdu",
+    "pwid",
+    "illicit drugs",
+    "polysubstance"
+   ],
+   "consider": [
+    {
+     "name": "Opioid dependence",
+     "q": "opioid dependence",
+     "note": "Includes on maintenance therapy and in remission."
+    },
+    {
+     "name": "Stimulant dependence",
+     "q": "stimulant dependence",
+     "note": ""
+    },
+    {
+     "name": "Cocaine dependence",
+     "q": "cocaine dependence",
+     "note": ""
+    },
+    {
+     "name": "Cannabis dependence",
+     "q": "cannabis dependence",
+     "note": ""
+    },
+    {
+     "name": "Opioid abuse (mild)",
+     "q": "opioid abuse",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "terms": [
+    "convulsion",
+    "spells",
+    "staring spells",
+    "keppra",
+    "levetiracetam",
+    "lamotrigine"
+   ],
+   "consider": [
+    {
+     "name": "Epilepsy",
+     "q": "epilepsy",
+     "note": "Type, intractable or not, with or without status."
+    },
+    {
+     "name": "Seizure disorder",
+     "q": "seizures",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "terms": [
+    "jaundice",
+    "ascites",
+    "elevated lfts",
+    "abnormal lfts",
+    "transaminitis",
+    "elevated liver enzymes",
+    "thrombocytopenia liver",
+    "splenomegaly"
+   ],
+   "consider": [
+    {
+     "name": "Cirrhosis",
+     "q": "cirrhosis",
+     "note": "Etiology; compensated vs decompensated."
+    },
+    {
+     "name": "Chronic hepatitis B or C",
+     "q": "chronic viral hepatitis",
+     "note": "Cured HCV is history, not active."
+    },
+    {
+     "name": "Portal hypertension",
+     "q": "portal hypertension",
+     "note": ""
+    },
+    {
+     "name": "Hepatic failure",
+     "q": "hepatic failure",
+     "note": ""
+    },
+    {
+     "name": "Esophageal varices",
+     "q": "esophageal varices",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "terms": [
+    "elevated creatinine",
+    "creatinine",
+    "low egfr",
+    "egfr",
+    "gfr",
+    "proteinuria",
+    "albuminuria",
+    "kidney function"
+   ],
+   "consider": [
+    {
+     "name": "Chronic kidney disease",
+     "q": "chronic kidney disease",
+     "note": "Stage 3a vs 3b; two eGFRs at least 3 months apart."
+    },
+    {
+     "name": "Diabetic CKD",
+     "q": "diabetes mellitus with diabetic chronic kidney disease",
+     "note": "Plus the N18.- stage code."
+    },
+    {
+     "name": "Hypertensive CKD",
+     "q": "hypertensive chronic kidney disease",
+     "note": "Plus the N18.- stage code."
+    },
+    {
+     "name": "End stage renal disease",
+     "q": "end stage renal disease",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "terms": [
+    "anemia",
+    "low hemoglobin",
+    "low hgb"
+   ],
+   "consider": [
+    {
+     "name": "Aplastic anemia",
+     "q": "aplastic anemia",
+     "note": "Iron deficiency and anemia of chronic disease don't map."
+    },
+    {
+     "name": "Acquired hemolytic anemia",
+     "q": "hemolytic anemia",
+     "note": ""
+    },
+    {
+     "name": "Myelodysplastic syndrome",
+     "q": "myelodysplastic",
+     "note": ""
+    },
+    {
+     "name": "Multiple myeloma",
+     "q": "multiple myeloma",
+     "note": ""
+    },
+    {
+     "name": "Sickle cell disease",
+     "q": "sickle-cell",
+     "note": ""
+    },
+    {
+     "name": "CKD (stage drives the HCC)",
+     "q": "chronic kidney disease",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "terms": [
+    "bruising",
+    "easy bruising",
+    "bleeding",
+    "petechiae",
+    "low platelet"
+   ],
+   "consider": [
+    {
+     "name": "Immune thrombocytopenia",
+     "q": "immune thrombocytopenic purpura",
+     "note": "Thrombocytopenia NOS (D69.6) doesn't map."
+    },
+    {
+     "name": "Von Willebrand disease",
+     "q": "von willebrand",
+     "note": ""
+    },
+    {
+     "name": "Hemophilia",
+     "q": "hereditary factor viii deficiency",
+     "note": ""
+    },
+    {
+     "name": "Cirrhosis",
+     "q": "cirrhosis",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "terms": [
+    "joint pain",
+    "joint swelling",
+    "synovitis",
+    "morning stiffness",
+    "arthralgia",
+    "inflammatory arthritis"
+   ],
+   "consider": [
+    {
+     "name": "Rheumatoid arthritis",
+     "q": "rheumatoid arthritis",
+     "note": "Seropositive vs seronegative; current DMARD."
+    },
+    {
+     "name": "Psoriatic arthritis",
+     "q": "psoriatic arthritis",
+     "note": ""
+    },
+    {
+     "name": "Ankylosing spondylitis",
+     "q": "ankylosing spondylitis",
+     "note": ""
+    },
+    {
+     "name": "Systemic lupus erythematosus",
+     "q": "systemic lupus erythematosus",
+     "note": ""
+    },
+    {
+     "name": "Polymyalgia rheumatica",
+     "q": "polymyalgia rheumatica",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "terms": [
+    "back pain",
+    "height loss",
+    "kyphosis",
+    "osteoporosis"
+   ],
+   "consider": [
+    {
+     "name": "Osteoporotic vertebral fracture",
+     "q": "with current pathological fracture, vertebra",
+     "note": "Osteoporosis without fracture doesn't map."
+    },
+    {
+     "name": "Collapsed vertebra",
+     "q": "collapsed vertebra",
+     "note": ""
+    },
+    {
+     "name": "Bone metastases",
+     "q": "secondary malignant neoplasm of bone",
+     "note": ""
+    },
+    {
+     "name": "Multiple myeloma",
+     "q": "multiple myeloma",
+     "note": ""
+    },
+    {
+     "name": "Ankylosing spondylitis",
+     "q": "ankylosing spondylitis",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "terms": [
+    "cough",
+    "chronic cough",
+    "wheezing",
+    "wheeze",
+    "sputum",
+    "inhaler"
+   ],
+   "consider": [
+    {
+     "name": "COPD",
+     "q": "chronic obstructive pulmonary disease",
+     "note": ""
+    },
+    {
+     "name": "Severe persistent asthma",
+     "q": "severe persistent asthma",
+     "note": ""
+    },
+    {
+     "name": "Bronchiectasis",
+     "q": "bronchiectasis",
+     "note": ""
+    },
+    {
+     "name": "Interstitial lung disease",
+     "q": "pulmonary fibrosis",
+     "note": ""
+    },
+    {
+     "name": "Cystic fibrosis",
+     "q": "cystic fibrosis",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "terms": [
+    "frequent infections",
+    "recurrent infections",
+    "immunocompromised",
+    "immunosuppressed"
+   ],
+   "consider": [
+    {
+     "name": "Immunodeficiency",
+     "q": "immunodeficiency",
+     "note": ""
+    },
+    {
+     "name": "Neutropenia",
+     "q": "neutropenia",
+     "note": ""
+    },
+    {
+     "name": "HIV",
+     "q": "human immunodeficiency virus",
+     "note": ""
+    },
+    {
+     "name": "Transplant status",
+     "q": "transplant status",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "terms": [
+    "diarrhea",
+    "chronic diarrhea",
+    "bloody stool",
+    "blood in stool",
+    "hematochezia",
+    "abdominal pain"
+   ],
+   "consider": [
+    {
+     "name": "Crohn's disease",
+     "q": "crohn",
+     "note": ""
+    },
+    {
+     "name": "Ulcerative colitis",
+     "q": "ulcerative colitis",
+     "note": ""
+    },
+    {
+     "name": "Chronic pancreatitis",
+     "q": "chronic pancreatitis",
+     "note": ""
+    },
+    {
+     "name": "Colorectal cancer",
+     "q": "malignant neoplasm of colon",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "terms": [
+    "hyperglycemia",
+    "high blood sugar",
+    "a1c",
+    "hba1c",
+    "elevated a1c",
+    "polyuria",
+    "polydipsia",
+    "glucose"
+   ],
+   "consider": [
+    {
+     "name": "Type 2 diabetes",
+     "q": "type 2 diabetes mellitus",
+     "note": "Prediabetes (R73.03) doesn't map."
+    },
+    {
+     "name": "Type 1 diabetes",
+     "q": "type 1 diabetes mellitus",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "terms": [
+    "weight",
+    "overweight",
+    "high bmi",
+    "obese"
+   ],
+   "consider": [
+    {
+     "name": "Morbid (class 3) obesity",
+     "q": "obesity, class 3",
+     "note": "Class 1 and 2 obesity don't map."
+    },
+    {
+     "name": "Morbid obesity",
+     "q": "morbid (severe) obesity",
+     "note": ""
+    },
+    {
+     "name": "BMI 40 or greater",
+     "q": "body mass index [bmi] 40",
+     "note": "Needs a provider-documented weight diagnosis."
+    },
+    {
+     "name": "Obesity hypoventilation",
+     "q": "obesity hypoventilation",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "terms": [
+    "one-sided weakness",
+    "facial droop",
+    "residual weakness",
+    "stroke residual",
+    "history of stroke",
+    "prior stroke"
+   ],
+   "consider": [
+    {
+     "name": "Hemiplegia/hemiparesis after stroke",
+     "q": "following cerebral infarction",
+     "note": "History of stroke without residual (Z86.73) doesn't map."
+    },
+    {
+     "name": "Acute ischemic stroke",
+     "q": "cerebral infarction",
+     "note": ""
+    },
+    {
+     "name": "Monoplegia",
+     "q": "monoplegia",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "terms": [
+    "prosthesis",
+    "missing limb",
+    "missing leg",
+    "missing foot"
+   ],
+   "consider": [
+    {
+     "name": "Lower limb amputation status",
+     "q": "acquired absence of leg",
+     "note": ""
+    },
+    {
+     "name": "Foot amputation status",
+     "q": "acquired absence of foot",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "terms": [
+    "ptosis",
+    "fatigable weakness",
+    "double vision",
+    "diplopia",
+    "dysphagia weakness"
+   ],
+   "consider": [
+    {
+     "name": "Myasthenia gravis",
+     "q": "myasthenia gravis",
+     "note": "With or without exacerbation."
+    },
+    {
+     "name": "ALS",
+     "q": "amyotrophic lateral sclerosis",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "terms": [
+    "tumor",
+    "mass",
+    "lesion",
+    "chemo",
+    "chemotherapy",
+    "radiation",
+    "oncology"
+   ],
+   "consider": [
+    {
+     "name": "Active cancer",
+     "q": "malignant neoplasm",
+     "note": "Code as active only with current treatment or evidence of disease."
+    },
+    {
+     "name": "Metastatic disease",
+     "q": "secondary malignant neoplasm",
+     "note": ""
+    },
+    {
+     "name": "Lymphoma",
+     "q": "lymphoma",
+     "note": ""
+    },
+    {
+     "name": "Leukemia",
+     "q": "leukemia",
+     "note": ""
+    }
+   ]
+  }
+ ],
+ "notes": [
+  {
+   "terms": [
+    "malnutrition",
+    "pcm",
+    "cachexia",
+    "protein calorie",
+    "protein-calorie"
+   ],
+   "text": "Protein-calorie malnutrition (E40-E46) and cachexia (R64) don't map to any V28 HCC. Still document them for severity and quality."
+  },
+  {
+   "terms": [
+    "depression",
+    "mdd",
+    "depressed",
+    "major depressive disorder"
+   ],
+   "text": "Only moderate or severe MDD, single or recurrent, maps. Unspecified depression (F32.A, F32.9), mild episodes, and MDD in remission don't."
+  },
+  {
+   "terms": [
+    "mi",
+    "heart attack",
+    "old mi",
+    "myocardial infarction"
+   ],
+   "text": "Acute MI codes apply for 4 weeks from onset. Old MI (I25.2) doesn't map."
+  },
+  {
+   "terms": [
+    "stroke",
+    "cva",
+    "history of stroke",
+    "prior stroke"
+   ],
+   "text": "Acute stroke codes (I63.-) are for the acute episode. After that, use sequelae codes (I69.-) for residual deficits; history without residual (Z86.73) doesn't map."
+  },
+  {
+   "terms": [
+    "prediabetes",
+    "pre-diabetes",
+    "impaired fasting glucose"
+   ],
+   "text": "Prediabetes (R73.03) doesn't map."
+  },
+  {
+   "terms": [
+    "htn",
+    "hypertension"
+   ],
+   "text": "Essential hypertension (I10) doesn't map. Hypertensive heart disease with heart failure (I11.0, I13.0, I13.2) maps to HCC 226; hypertensive CKD maps through the CKD stage code (N18.-)."
+  },
+  {
+   "terms": [
+    "ckd",
+    "kidney disease",
+    "ckd 3",
+    "ckd3",
+    "chronic kidney disease"
+   ],
+   "text": "Stage 3 unspecified (N18.30) maps to HCC 329; 3a and 3b are separate codes. CKD stages 1-2 and unspecified CKD (N18.9) don't map. Dialysis status (Z99.2) doesn't map in V28."
+  },
+  {
+   "terms": [
+    "aud",
+    "alcohol",
+    "etoh",
+    "alcohol abuse"
+   ],
+   "text": "Alcohol abuse (mild AUD, F10.1-) doesn't map. Alcohol dependence (moderate or severe AUD, F10.2-) maps, including in remission."
+  },
+  {
+   "terms": [
+    "cannabis",
+    "marijuana"
+   ],
+   "text": "Cannabis abuse (mild, F12.1-) doesn't map. Cannabis dependence (F12.2-) maps."
+  },
+  {
+   "terms": [
+    "pad",
+    "pvd",
+    "claudication",
+    "peripheral artery disease"
+   ],
+   "text": "Atherosclerosis of the extremities with claudication alone (I70.21-) doesn't map; rest pain, ulceration, and gangrene do. In a patient with diabetes, E11.51 maps to HCC 37."
+  },
+  {
+   "terms": [
+    "asthma"
+   ],
+   "text": "Only severe persistent asthma (J45.5-) maps. Mild and moderate persistent asthma don't."
+  },
+  {
+   "terms": [
+    "neuropathy",
+    "polyneuropathy"
+   ],
+   "text": "Polyneuropathy NOS (G62.9) doesn't map. Diabetic polyneuropathy (E11.42) maps to HCC 37."
+  },
+  {
+   "terms": [
+    "obesity",
+    "obese",
+    "bmi"
+   ],
+   "text": "Class 1 and 2 obesity don't map. A BMI code (Z68.41-Z68.45) maps only with a provider-documented associated weight diagnosis; the BMI value itself can come from nursing or dietitian notes."
+  },
+  {
+   "terms": [
+    "thrombocytopenia",
+    "low platelets"
+   ],
+   "text": "Thrombocytopenia NOS (D69.6) doesn't map."
+  },
+  {
+   "terms": [
+    "anemia"
+   ],
+   "text": "Iron deficiency anemia and anemia in CKD or chronic disease don't map."
+  },
+  {
+   "terms": [
+    "cancer",
+    "malignancy",
+    "ca",
+    "breast cancer",
+    "prostate cancer",
+    "colon cancer",
+    "lung cancer"
+   ],
+   "text": "Code active cancer only with current treatment or evidence of disease. Personal history (Z85.-) doesn't map. Adjuvant hormonal therapy (e.g., tamoxifen, letrozole) counts as current treatment."
+  },
+  {
+   "terms": [
+    "dvt",
+    "pe",
+    "vte",
+    "clot"
+   ],
+   "text": "Long-term anticoagulation after a resolved clot is history (Z86.71-) plus Z79.01, which don't map. Chronic DVT or PE still present maps."
+  },
+  {
+   "terms": [
+    "afib",
+    "a fib",
+    "af",
+    "atrial fibrillation"
+   ],
+   "text": "AFib maps even when currently in sinus rhythm if it's still being managed (anticoagulation, rate or rhythm control)."
+  },
+  {
+   "terms": [
+    "hcv",
+    "hep c",
+    "hepatitis c"
+   ],
+   "text": "Chronic HCV (B18.2) maps. After a sustained virologic response it's history, not active disease."
+  },
+  {
+   "terms": [
+    "seizure",
+    "seizures",
+    "epilepsy"
+   ],
+   "text": "Both epilepsy (G40.-) and seizures NOS (R56.9) map to HCC 201."
+  },
+  {
+   "terms": [
+    "pacemaker",
+    "icd",
+    "defibrillator"
+   ],
+   "text": "Device status codes (Z95.-) don't map. Document the underlying rhythm or cardiomyopathy diagnosis."
+  },
+  {
+   "terms": [
+    "amputation",
+    "amputee",
+    "toe amputation"
+   ],
+   "text": "Leg and foot amputation status maps (HCC 409); toe amputation status (Z89.41-, Z89.42-) doesn't."
+  },
+  {
+   "terms": [
+    "osteoporosis"
+   ],
+   "text": "Osteoporosis without current fracture (M81.-) doesn't map."
+  },
+  {
+   "terms": [
+    "dialysis"
+   ],
+   "text": "Dialysis status (Z99.2) doesn't map in V28; document the CKD stage or ESRD (N18.5, N18.6)."
+  }
+ ],
+ "tips": {
+  "36": "All three diabetes HCCs (36, 37, 38) carry the same weight in V28, and only one counts. Still code the complication, since many carry their own HCC (CKD stage, ulcers, retinopathy).",
+  "37": "ICD-10 presumes a link between diabetes and conditions listed under \"with\" (CKD, neuropathy, PAD, retinopathy) unless you document they're unrelated. Code each complication plus any manifestation code it needs.",
+  "38": "All three diabetes HCCs carry the same weight in V28, and only one counts. Long-term insulin or oral hypoglycemic use goes in Z79.4 or Z79.84.",
+  "48": "Document the weight diagnosis yourself (morbid or class 3 obesity). BMI codes need an associated weight diagnosis by the provider.",
+  "155": "Document episode (single vs recurrent), severity (moderate or severe), and psychotic features. Remission and unspecified severity don't map.",
+  "154": "Document current episode type and severity when known.",
+  "139": "Dependence (moderate or severe AUD) maps, including in remission. Abuse (mild) doesn't.",
+  "137": "Dependence, including on maintenance therapy (buprenorphine, methadone) and in remission, maps.",
+  "138": "Mild use disorder (abuse) of non-cannabis drugs.",
+  "125": "Severity is part of the code. Add behavioral, psychotic, mood, or anxiety disturbance if present.",
+  "126": "Severity is part of the code. Add behavioral, psychotic, mood, or anxiety disturbance if present.",
+  "127": "Mild or unspecified severity. Alzheimer's (G30.-) needs the paired F02.- code.",
+  "226": "Document type (systolic, diastolic, combined) and acuity. Hypertensive heart disease with HF uses I11.0 or I13.- plus the I50.- code. Pulmonary hypertension also lands here.",
+  "224": "Acute on chronic is for an exacerbation; return to chronic codes after it resolves.",
+  "225": "Acute is for the acute episode.",
+  "227": "Document the type of cardiomyopathy.",
+  "228": "Acute MI codes apply for 4 weeks from onset.",
+  "238": "Document type (paroxysmal, persistent, permanent AFib; flutter; SSS) and current management.",
+  "249": "Acute stroke is for the acute episode. After discharge, use I69.- for residual deficits.",
+  "253": "Document side and whether the dominant side is affected.",
+  "263": "Atherosclerosis of the extremities with ulceration or gangrene. Also code the ulcer site and depth.",
+  "264": "Includes atherosclerosis of the extremities with rest pain and other vascular disease with complications.",
+  "267": "Acute vs chronic, vessel, and side. Resolved clots on anticoagulation are history.",
+  "279": "Severe persistent asthma only.",
+  "280": "Name the disease: COPD, emphysema, chronic bronchitis, ILD, or bronchiectasis.",
+  "213": "Chronic respiratory failure needs a documented diagnosis (with hypoxia or hypercapnia), not just home O2.",
+  "326": "Stage 5 or ESRD. Pair with Z99.2 if on dialysis (no HCC itself).",
+  "327": "Stage 4 (eGFR 15-29).",
+  "328": "Stage 3b (eGFR 30-44).",
+  "329": "Stage 3a (eGFR 45-59) or stage 3 unspecified. Documenting 3a vs 3b is more accurate.",
+  "17": "Code the metastatic site and the primary. Active only with current treatment or evidence of disease.",
+  "18": "Code the metastatic site and the primary.",
+  "19": "Active disease only. MDS and myeloma land here.",
+  "20": "Active disease only.",
+  "21": "Active disease only.",
+  "22": "Active disease only. Personal history (Z85.-) doesn't map.",
+  "23": "Active disease only. Adjuvant hormonal therapy counts as current treatment.",
+  "63": "Chronic hepatic failure, portal hypertension, varices, and other end-stage liver complications.",
+  "64": "Document etiology (alcoholic, MASH-related, viral, biliary).",
+  "65": "Chronic viral hepatitis B or C, or autoimmune hepatitis. Cured HCV is history.",
+  "93": "Seropositive vs seronegative, site, and current treatment.",
+  "94": "Document the specific connective tissue disease.",
+  "201": "Epilepsy type and intractability when known.",
+  "198": "Document MS type (relapsing-remitting, primary or secondary progressive) and whether active; the 3-character G35 is no longer billable.",
+  "199": "Parkinson disease codes include dyskinesia and fluctuations (G20.-).",
+  "379": "Pressure ulcer stage can come from wound care or nursing notes; the ulcer diagnosis must be documented by the provider.",
+  "381": "Pressure ulcer stage can come from wound care or nursing notes; the ulcer diagnosis must be documented by the provider.",
+  "382": "Pressure ulcer stage can come from wound care or nursing notes; the ulcer diagnosis must be documented by the provider.",
+  "380": "Ulcer depth can come from wound care notes; the ulcer diagnosis must be documented by the provider.",
+  "383": "Document site and depth. Pair with the cause (diabetes, PAD, venous) when present.",
+  "401": "Current fracture only; healed fractures are history.",
+  "402": "Current fracture only.",
+  "409": "Status code; document it at a visit each year.",
+  "463": "Status code; document the ostomy's presence each year.",
+  "211": "Tracheostomy or ventilator dependence status.",
+  "300": "Exudative (wet) AMD only; pull stage and laterality from the eye exam.",
+  "298": "Pull from the eye exam report. Also code the diabetes complication code.",
+  "1": "HIV disease (B20) or asymptomatic HIV infection status (Z21).",
+  "112": "Specified coagulation defects and immune thrombocytopenia. Thrombocytopenia NOS doesn't map.",
+  "109": "Acquired hemolytic, aplastic, and sideroblastic anemias.",
+  "51": "Specified endocrine disorders.",
+  "50": "Amyloidosis, porphyria, and other specified metabolic disorders."
+ }
+}

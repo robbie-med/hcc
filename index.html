@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>HCC Finder</title>
+<style>
+:root {
+  --bg: #f4f6f7;
+  --surface: #ffffff;
+  --ink: #15202a;
+  --muted: #5a6774;
+  --line: #dbe1e6;
+  --accent: #0a6b70;
+  --accent-ink: #ffffff;
+  --accent-soft: color-mix(in srgb, var(--accent) 14%, var(--surface));
+  --note-bg: #fbf2de;
+  --note-ink: #6e4a00;
+  --none: #8a96a2;
+  --font-ui: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-code: ui-monospace, "SF Mono", "Cascadia Mono", "Roboto Mono", Menlo, Consolas, monospace;
+  --r: 8px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e1317; --surface: #151c22; --ink: #e3e8ec; --muted: #93a0ac; --line: #26313a;
+    --accent: #5fc3c6; --accent-ink: #0b1a1b; --note-bg: #2a2314; --note-ink: #e9c06a; --none: #6f7c88;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0e1317; --surface: #151c22; --ink: #e3e8ec; --muted: #93a0ac; --line: #26313a;
+  --accent: #5fc3c6; --accent-ink: #0b1a1b; --note-bg: #2a2314; --note-ink: #e9c06a; --none: #6f7c88;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { background: var(--bg); margin: 0; }
+body { color: var(--ink); font: 15px/1.45 var(--font-ui); }
+[hidden] { display: none !important; }
+.wrap { max-width: 860px; margin: 0 auto; padding-inline: 16px; }
+header { position: sticky; top: 0; z-index: 5; background: var(--surface); border-bottom: 1px solid var(--line); }
+header .wrap { padding-block: 12px; display: grid; gap: 10px; }
+.brand { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.brand h1 { margin: 0; font-size: 17px; }
+.prefs { position: relative; }
+.prefs summary { list-style: none; cursor: pointer; width: 30px; height: 30px; border-radius: 50%; border: 1px solid var(--line); background: conic-gradient(var(--accent) 0 50%, var(--surface) 0); }
+.prefs summary::-webkit-details-marker { display: none; }
+.prefs .panel { position: absolute; right: 0; top: 38px; z-index: 7; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 12px; display: grid; gap: 10px; min-width: 210px; box-shadow: 0 6px 24px rgb(0 0 0 / .12); }
+.prefs label { display: flex; align-items: center; justify-content: space-between; gap: 12px; font-size: 14px; }
+.prefs input[type=color] { width: 44px; height: 30px; padding: 0; border: 1px solid var(--line); border-radius: 6px; background: none; cursor: pointer; }
+.prefs select { font: inherit; font-size: 14px; padding: 4px 6px; border: 1px solid var(--line); border-radius: 6px; background: var(--bg); color: var(--ink); }
+.swatches { display: flex; gap: 6px; flex-wrap: wrap; }
+.swatches button { width: 22px; height: 22px; border-radius: 50%; border: 1px solid var(--line); cursor: pointer; padding: 0; }
+.search { display: flex; gap: 8px; }
+#q { flex: 1; min-width: 0; font: inherit; font-size: 17px; padding: 10px 12px; border: 1.5px solid var(--line); border-radius: var(--r); background: var(--bg); color: var(--ink); }
+#q:focus { outline: none; border-color: var(--accent); }
+#clear { font: inherit; padding: 0 14px; border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); color: var(--muted); cursor: pointer; }
+main .wrap { padding-block: 16px 140px; display: grid; gap: 14px; }
+.status { color: var(--muted); font-size: 13px; }
+.note { background: var(--note-bg); color: var(--note-ink); border-radius: var(--r); padding: 10px 12px; font-size: 14px; }
+.section-label { font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin: 4px 0 -4px; }
+.consider { display: grid; gap: 6px; }
+.cons { display: grid; gap: 2px; text-align: left; font: inherit; padding: 9px 12px; border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); color: var(--ink); cursor: pointer; }
+.cons:hover, .cons:focus-visible { border-color: var(--accent); }
+.cons b { font-weight: 600; }
+.cons .h { font: 12px var(--font-code); color: var(--accent); }
+.cons .n { color: var(--muted); font-size: 13px; }
+.group { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; }
+.ghead { padding: 10px 12px 8px; display: grid; gap: 4px; border-bottom: 1px solid var(--line); }
+.gtop { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.badge { font: 600 12px var(--font-code); background: var(--accent); color: var(--accent-ink); padding: 2px 7px; border-radius: 5px; white-space: nowrap; }
+.glabel { font-weight: 600; flex: 1; min-width: 0; }
+.raf { font: 12px var(--font-code); color: var(--muted); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.hier, .tip { font-size: 13px; color: var(--muted); }
+.tip { color: var(--ink); }
+.row { display: grid; grid-template-columns: auto 1fr auto; gap: 10px; align-items: start; padding: 8px 12px; border-top: 1px solid var(--line); }
+.row:first-of-type { border-top: 0; }
+.code { font: 600 14px var(--font-code); color: var(--accent); background: var(--accent-soft); border: 0; border-radius: 5px; padding: 3px 7px; cursor: pointer; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.desc { min-width: 0; text-align: left; font: inherit; background: none; border: 0; padding: 2px 0; color: var(--ink); cursor: pointer; }
+.desc:hover { text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 3px; }
+.sub { display: block; font-size: 12px; color: var(--muted); margin-top: 2px; }
+.add { font: 600 16px/1 var(--font-ui); width: 32px; height: 28px; border-radius: 6px; border: 1px solid var(--line); background: var(--surface); color: var(--accent); cursor: pointer; }
+.add[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.more { font: inherit; font-size: 13px; width: 100%; padding: 8px; border: 0; border-top: 1px solid var(--line); background: none; color: var(--accent); cursor: pointer; }
+details.nohcc { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); }
+details.nohcc summary { padding: 10px 12px; cursor: pointer; color: var(--muted); }
+details.nohcc .code { color: var(--none); background: transparent; border: 1px solid var(--line); }
+.empty { color: var(--muted); padding: 24px 0; text-align: center; }
+button:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+footer { color: var(--muted); font-size: 12px; display: grid; gap: 4px; padding-top: 12px; }
+#tray { position: fixed; left: 0; right: 0; bottom: 0; z-index: 6; background: var(--surface); border-top: 1px solid var(--line); padding-bottom: env(safe-area-inset-bottom, 0px); }
+#tray .wrap { padding-block: 10px; display: grid; gap: 8px; }
+.tbar { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.tbar .count { flex: 1; min-width: 0; font-weight: 600; background: none; border: 0; text-align: left; font-size: 14px; color: var(--ink); cursor: pointer; padding: 6px 0; }
+.btn { font: inherit; font-size: 14px; padding: 7px 12px; border-radius: var(--r); border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; }
+.btn.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); font-weight: 600; }
+#tlist { max-height: 40vh; overflow: auto; display: grid; gap: 4px; font-size: 13px; }
+.titem { display: grid; grid-template-columns: auto 1fr auto; gap: 8px; align-items: start; }
+.titem code { font: 600 13px var(--font-code); color: var(--accent); }
+.titem button { border: 0; background: none; color: var(--muted); cursor: pointer; font-size: 16px; line-height: 1; }
+#toast { position: fixed; left: 50%; bottom: calc(80px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); background: var(--ink); color: var(--bg); padding: 7px 12px; border-radius: 999px; font-size: 13px; z-index: 20; max-width: calc(100% - 32px); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+#ta { position: fixed; left: -9999px; top: 0; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="brand">
+      <h1>HCC Finder</h1>
+      <details class="prefs">
+        <summary aria-label="Colors"></summary>
+        <div class="panel">
+          <label>Accent <input id="accent" type="color"></label>
+          <div class="swatches" id="swatches"></div>
+          <label>Mode
+            <select id="theme"><option value="">Auto</option><option value="light">Light</option><option value="dark">Dark</option></select>
+          </label>
+          <button class="btn" id="reset" type="button">Reset</button>
+        </div>
+      </details>
+    </div>
+    <div class="search">
+      <input id="q" type="search" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Diagnosis, symptom, abbreviation, or code" aria-label="Search">
+      <button id="clear" type="button" aria-label="Clear search">Clear</button>
+    </div>
+  </div>
+</header>
+
+<main><div class="wrap" id="out"><p class="status">Loading…</p></div></main>
+
+<div id="tray" hidden>
+  <div class="wrap">
+    <div class="tbar">
+      <button class="count" id="tcount" type="button" aria-expanded="false"></button>
+      <button class="btn" id="tcodes" type="button">Codes only</button>
+      <button class="btn primary" id="tcopy" type="button">Copy list</button>
+      <button class="btn" id="tclear" type="button">Clear</button>
+    </div>
+    <div id="tlist" hidden></div>
+  </div>
+</div>
+<div id="toast" hidden></div>
+<textarea id="ta" aria-hidden="true" tabindex="-1"></textarea>
+
+<script>
+(() => {
+  const $ = id => document.getElementById(id);
+  const STOP = new Set(["of","the","and","a","an","to","in","for","or","with","nos"]);
+  const stem = t => (t.length > 5 && t.endsWith("es")) ? t.slice(0,-2) : (t.length > 6 && t.endsWith("ic")) ? t.slice(0,-2) : (t.length > 4 && t.endsWith("s") && !t.endsWith("ss")) ? t.slice(0,-1) : t;
+  const words = s => s.toLowerCase().split(/[^a-z0-9]+/).filter(Boolean);
+  const toks = s => words(s).filter(t => !STOP.has(t)).map(stem);
+  const norm = s => " " + words(s).join(" ") + " ";
+  const dot = c => c.length > 3 ? c.slice(0,3) + "." + c.slice(3) : c;
+  const esc = s => String(s).replace(/[&<>"]/g, m => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));
+  const reEsc = s => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+  const store = { get(k, d) { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch { return d; } }, set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} } };
+
+  // --- colors
+  const SWATCHES = ["#0a6b70", "#2563eb", "#7c3aed", "#c2410c", "#be123c", "#15803d", "#475569"];
+  const root = document.documentElement;
+  let prefs = store.get("hcc-prefs", { accent: null, theme: "" });
+  function applyPrefs() {
+    if (prefs.theme) root.dataset.theme = prefs.theme; else delete root.dataset.theme;
+    if (prefs.accent) {
+      const n = parseInt(prefs.accent.slice(1), 16), lum = (0.299 * (n >> 16) + 0.587 * (n >> 8 & 255) + 0.114 * (n & 255)) / 255;
+      root.style.setProperty("--accent", prefs.accent);
+      root.style.setProperty("--accent-ink", lum > 0.6 ? "#0b1a1b" : "#ffffff");
+    } else { root.style.removeProperty("--accent"); root.style.removeProperty("--accent-ink"); }
+    $("accent").value = prefs.accent || getComputedStyle(root).getPropertyValue("--accent").trim();
+    $("theme").value = prefs.theme;
+    store.set("hcc-prefs", prefs);
+  }
+  $("swatches").innerHTML = SWATCHES.map(c => `<button type="button" data-swatch="${c}" style="background:${c}" aria-label="${c}"></button>`).join("");
+  $("accent").addEventListener("input", e => { prefs.accent = e.target.value; applyPrefs(); });
+  $("theme").addEventListener("change", e => { prefs.theme = e.target.value; applyPrefs(); });
+  $("reset").addEventListener("click", () => { prefs = { accent: null, theme: "" }; applyPrefs(); });
+  applyPrefs();
+
+  let D, IDX = [], HCCS = {}, SYN = [];
+  let picked = store.get("hcc-picked", []);
+
+  function toast(msg) { const t = $("toast"); t.textContent = msg; t.hidden = false; clearTimeout(toast.h); toast.h = setTimeout(() => t.hidden = true, 1400); }
+  function copy(text, label) {
+    const done = () => toast("Copied " + label);
+    const fallback = () => { const ta = $("ta"); ta.value = text; ta.select(); try { document.execCommand("copy"); done(); } catch { toast("Select and copy manually"); } };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, fallback); else fallback();
+  }
+
+  function build() {
+    for (const k in D.hcc) HCCS[k] = D.hcc[k];
+    IDX = D.codes.map(r => {
+      const h = r[2], labels = h.map(n => (HCCS[n] || {}).l || "").join(" ");
+      return { c: r[0], d: r[1], h, x: r[3] || "", e: r[4] || "", td: norm(r[1]), tx: norm((r[3] || "") + " " + labels) };
+    });
+    SYN = Object.entries(D.syn).map(([k, v]) => [new RegExp("(^|\\s)" + reEsc(k) + "(?=\\s|$)"), k, v]);
+  }
+
+  function variants(q) {
+    const out = [];
+    for (const [re, k, exps] of SYN) if (re.test(q)) for (const e of exps) out.push(q.replace(re, "$1" + e));
+    return [q, ...new Set(out)];
+  }
+
+  function find(q, hccOnly) {
+    const res = new Map();
+    const codeLike = /^[a-z]\d[0-9a-z]?\.?[0-9a-z]*$/i.test(q.replace(/\s/g, ""));
+    if (codeLike) {
+      const p = q.replace(/[\s.]/g, "").toUpperCase();
+      for (const r of IDX) if (r.c.startsWith(p) && (!hccOnly || r.h.length)) res.set(r.c, { r, s: 100 - r.c.length });
+      return res;
+    }
+    const run = (v, bonus) => {
+      const ts = toks(v); if (!ts.length) return;
+      const keys = ts.map(t => " " + t);
+      for (const r of IDX) {
+        if (hccOnly && !r.h.length) continue;
+        let inD = 0, ok = true;
+        for (const k of keys) { if (r.td.includes(k)) inD++; else if (!r.tx.includes(k)) { ok = false; break; } }
+        if (!ok) continue;
+        const s = inD * 10 + bonus - r.d.length / 60;
+        const prev = res.get(r.c); if (!prev || prev.s < s) res.set(r.c, { r, s, keys });
+      }
+    };
+    const vs = variants(q);
+    vs.slice(1).forEach(v => run(v, 0));
+    if (!res.size) run(q, 3);  // the raw query only when no abbreviation or synonym expanded it
+    const bmi = q.match(/\bbmi\s*(\d{2}(?:\.\d)?)\b/);
+    if (bmi && !hccOnly) {
+      const b = parseFloat(bmi[1]);
+      const c = b < 20 ? "Z681" : b < 40 ? "Z68" + Math.floor(b) : b < 45 ? "Z6841" : b < 50 ? "Z6842" : b < 60 ? "Z6843" : b < 70 ? "Z6844" : "Z6845";
+      const r = IDX.find(r => r.c === c); if (r) res.set(c, { r, s: 999, keys: [] });
+    }
+    return res;
+  }
+  // a code mapped to two HCCs is listed under the one whose label the search hit
+  function home(x) {
+    if (x.r.h.length < 2 || !x.keys) return x.r.h[0];
+    let best = x.r.h[0], n = -1;
+    for (const h of x.r.h) { const l = norm(HCCS[h].l); const k = x.keys.filter(k => l.includes(k)).length; if (k > n) { n = k; best = h; } }
+    return n > 0 ? best : x.r.h[0];
+  }
+
+  const phraseHit = (q, term) => q === term || new RegExp("(^|\\s)" + reEsc(term) + "(\\s|$)").test(q) || (q.length >= 4 && term.startsWith(q));
+  const consCache = {};
+  function consHccs(q) {
+    if (!consCache[q]) { const n = {}; for (const x of find(q, true).values()) { const h = home(x); n[h] = (n[h] || 0) + 1; } consCache[q] = Object.keys(n).sort((a, b) => n[b] - n[a]); }
+    return consCache[q];
+  }
+
+  function rowHTML(r, inGroup) {
+    const on = picked.some(p => p.c === r.c);
+    const other = inGroup != null ? r.h.filter(h => h !== inGroup) : [];
+    const subs = [];
+    if (other.length) subs.push("Also HCC " + other.join(", "));
+    if (r.e) subs.push("Edit: " + esc(r.e));
+    if (r.x) subs.push("Includes: " + esc(r.x));
+    return `<div class="row"><button class="code" data-copy="${esc(dot(r.c))}" title="Copy code">${esc(dot(r.c))}</button>` +
+      `<button class="desc" data-copy="${esc(r.d)}" title="Copy wording">${esc(r.d)}${subs.length ? `<span class="sub">${subs.join(" · ")}</span>` : ""}</button>` +
+      `<button class="add" data-add="${r.c}" aria-pressed="${on}" aria-label="${on ? "Remove from" : "Add to"} list">${on ? "✓" : "+"}</button></div>`;
+  }
+
+  const hname = n => `HCC ${n}`;
+  const plural = (n, w) => `${n} ${w}${n === 1 ? "" : "s"}`;
+  function render() {
+    const raw = $("q").value, q = raw.trim().toLowerCase().replace(/\s+/g, " ");
+    const out = $("out");
+    if (q.length < 2) { out.innerHTML = footer(); return; }
+    const html = [];
+
+    for (const n of D.notes) if (n.terms.some(t => phraseHit(q, t))) html.push(`<div class="note">${esc(n.text)}</div>`);
+
+    const syms = D.symptoms.filter(s => s.terms.some(t => phraseHit(q, t)));
+    if (syms.length) {
+      html.push(`<p class="section-label">Consider</p><div class="consider">`);
+      const seen = new Set();
+      for (const s of syms) for (const c of s.consider) {
+        if (seen.has(c.q)) continue; seen.add(c.q);
+        const hs = consHccs(c.q); if (!hs.length) continue;
+        html.push(`<button class="cons" data-q="${esc(c.q)}"><b>${esc(c.name)}</b><span class="h">${hs.slice(0, 3).map(hname).join(" · ")}</span>${c.note ? `<span class="n">${esc(c.note)}</span>` : ""}</button>`);
+      }
+      html.push(`</div>`);
+    }
+
+    const res = [...find(q, false).values()].sort((a, b) => b.s - a.s);
+    const hcc = res.filter(x => x.r.h.length), none = res.filter(x => !x.r.h.length);
+    const groups = new Map();
+    for (const x of hcc) { const g = home(x); if (!groups.has(g)) groups.set(g, []); groups.get(g).push(x); }
+    const order = [...groups.entries()].sort((a, b) => b[1][0].s - a[1][0].s || (HCCS[b[0]].w || 0) - (HCCS[a[0]].w || 0));
+
+    const fold = syms.length > 0 && order.length >= 5;
+    if (fold) html.push(`<details class="nohcc"><summary>${plural(hcc.length, "HCC code")} matching “${esc(raw.trim())}”</summary><div class="consider" style="padding:0 8px 8px">`);
+    else if (order.length) html.push(`<p class="section-label">${plural(hcc.length, "HCC code")} · ${plural(order.length, "HCC")}</p>`);
+    for (const [n, list] of order) {
+      const H = HCCS[n], tip = D.tips[n];
+      const hier = [];
+      if (H.b.length) hier.push("Outranked by " + H.b.map(hname).join(", "));
+      if (H.t.length) hier.push("Outranks " + H.t.map(hname).join(", "));
+      const lim = 8, open = expanded.has(n);
+      html.push(`<section class="group"><div class="ghead"><div class="gtop"><span class="badge">HCC ${n}</span><span class="glabel">${esc(H.l)}</span>${H.w != null ? `<span class="raf" title="Community, non-dual, aged weight">RAF ${H.w.toFixed(3)}</span>` : ""}</div>` +
+        (tip ? `<div class="tip">${esc(tip)}</div>` : "") + (hier.length ? `<div class="hier">${hier.join(" · ")}</div>` : "") + `</div>` +
+        list.slice(0, open ? list.length : lim).map(x => rowHTML(x.r, n)).join("") +
+        (list.length > lim && !open ? `<button class="more" data-more="${n}">Show all ${list.length}</button>` : "") + `</section>`);
+    }
+    if (fold) html.push(`</div></details>`);
+
+    if (none.length) {
+      html.push(`<details class="nohcc"${!hcc.length ? " open" : ""}><summary>${plural(none.length, "code")} with no HCC</summary>` +
+        none.slice(0, 40).map(x => rowHTML(x.r)).join("") + (none.length > 40 ? `<p class="status" style="padding:8px 12px">First 40 shown.</p>` : "") + `</details>`);
+    }
+    if (!html.length) html.push(`<p class="empty">No matches for “${esc(raw.trim())}”.</p>`);
+    out.innerHTML = html.join("") + footer();
+  }
+
+  function footer() {
+    const m = D.meta;
+    return `<footer><div>Reference only. Code what the note supports.</div><div>${esc(m.model)} · ${esc(m.mapping)} · ${esc(m.icd)}</div></footer>`;
+  }
+
+  function renderTray() {
+    $("tray").hidden = !picked.length;
+    $("tcount").textContent = `${picked.length} selected`;
+    $("tlist").innerHTML = picked.map(p => `<div class="titem"><code>${esc(dot(p.c))}</code><span>${esc(p.d)}</span><button data-rm="${p.c}" aria-label="Remove ${esc(dot(p.c))}">×</button></div>`).join("");
+    store.set("hcc-picked", picked);
+  }
+  function toggle(c) {
+    const i = picked.findIndex(p => p.c === c);
+    if (i >= 0) picked.splice(i, 1); else { const r = IDX.find(r => r.c === c); picked.push({ c, d: r.d }); }
+    renderTray();
+    document.querySelectorAll(`[data-add="${c}"]`).forEach(b => { const on = i < 0; b.setAttribute("aria-pressed", on); b.textContent = on ? "✓" : "+"; });
+  }
+
+  const expanded = new Set();
+  let t;
+  $("q").addEventListener("input", () => { expanded.clear(); clearTimeout(t); t = setTimeout(render, 120); });
+  $("q").addEventListener("focus", e => e.target.select());
+  $("clear").addEventListener("click", () => { $("q").value = ""; store.set("hcc-last", ""); render(); $("q").focus(); });
+  document.addEventListener("keydown", e => { if (e.key === "/" && document.activeElement !== $("q")) { e.preventDefault(); $("q").focus(); } });
+  document.addEventListener("click", e => {
+    const b = e.target.closest("button"); if (!b) return;
+    if (b.dataset.swatch) { prefs.accent = b.dataset.swatch; applyPrefs(); }
+    else if (b.dataset.copy) copy(b.dataset.copy, b.classList.contains("code") ? b.dataset.copy : "wording");
+    else if (b.dataset.add) toggle(b.dataset.add);
+    else if (b.dataset.q) { $("q").value = b.dataset.q; store.set("hcc-last", b.dataset.q); expanded.clear(); render(); window.scrollTo(0, 0); }
+    else if (b.dataset.more) { expanded.add(+b.dataset.more); render(); }
+    else if (b.dataset.rm) { toggle(b.dataset.rm); }
+  });
+  $("tcount").addEventListener("click", () => { const l = $("tlist"); l.hidden = !l.hidden; $("tcount").setAttribute("aria-expanded", !l.hidden); });
+  $("tcopy").addEventListener("click", () => copy(picked.map(p => `${dot(p.c)} ${p.d}`).join("\n"), `${picked.length} diagnos${picked.length === 1 ? "is" : "es"}`));
+  $("tcodes").addEventListener("click", () => copy(picked.map(p => dot(p.c)).join(", "), plural(picked.length, "code")));
+  $("tclear").addEventListener("click", () => { picked = []; renderTray(); render(); });
+
+  fetch("data.json").then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }).then(d => {
+    D = d; build(); $("q").value = store.get("hcc-last", ""); render(); renderTray();
+    $("q").addEventListener("input", () => store.set("hcc-last", $("q").value));
+  }).catch(err => { $("out").innerHTML = `<p class="empty">Couldn't load data.json (${esc(err.message)}). Serve the folder over HTTP.</p>`; });
+})();
+</script>
+</body>
+</html>
